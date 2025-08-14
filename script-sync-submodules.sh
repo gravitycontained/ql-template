@@ -2,11 +2,11 @@
 
 set -e
 
-git submodule sync --quiet
+git submodule sync --quiet --recursive
 
-git submodule update --init --quiet
+git submodule update --init --quiet --recursive
 
-git submodule foreach --quiet '
+git submodule foreach --quiet --recursive '
   branch=$(git symbolic-ref --short HEAD 2>/dev/null || echo "")
   if [ "$branch" != "main" ]; then
     echo "Switching to main in $name"
