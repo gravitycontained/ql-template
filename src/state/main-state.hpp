@@ -2,8 +2,6 @@
 
 #include <ql/ql.hpp>
 
-#pragma once
-
 struct MainApp
 {
 	ql_sync();
