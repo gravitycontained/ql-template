@@ -1,11 +1,10 @@
 #include <ql/ql.hpp>
 
-#include "fix-vcxproj.hpp"
-#include "graphic.hpp"
+#include "entry-point.hpp"
 
 int main() try
 {
-	graphic::run();
+	entry_point();
 }
 catch (const std::exception& any)
 {
