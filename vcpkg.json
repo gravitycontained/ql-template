@@ -6,6 +6,7 @@
     "bzip2",
     "curl",
     "glew",
+    "glm",
     "gmp",
     "freetype",
     "nlohmann-json",
