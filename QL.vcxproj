@@ -237,8 +237,6 @@
     <ClCompile Include="src/core/ql/graphic/sync/type/type.cpp" />
     <ClCompile Include="src/core/ql/graphic/util/util-sprite/util-sprite.cpp" />
     <ClCompile Include="src/core/ql/graphic/util/util-text/util-text.cpp" />
-    <ClCompile Include="src/_template/core/x.cpp" />
-    <ClCompile Include="src/_template/graphic/g.cpp" />
     <ClInclude Include="src/core/ql/core/advanced-type/iterative/iterative.hpp" />
     <ClInclude Include="src/core/ql/core/advanced-type/memory/memory.hpp" />
     <ClInclude Include="src/core/ql/core/advanced-type/memory/save-state.hpp" />
