@@ -98,7 +98,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;NOMINMAX;QL_USE_ALL;QL_EXPORT;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;NOMINMAX;QL_USE_SFML;QL_EXPORT;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -128,7 +128,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>brotlicommon.lib;brotlidec.lib;brotlienc.lib;bz2.lib;FLAC++.lib;FLAC.lib;freetype.lib;GlU32.Lib;libpng16.lib;ogg.lib;OpenAL32.lib;OpenGL32.Lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;zlib.lib;opengl32.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;ws2_32.lib;libcurl.lib;crypt32.lib;boost_filesystem-vc143-mt-x64-1_86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>avrt.lib;bcrypt.lib;brotlicommon.lib;brotlidec.lib;brotlienc.lib;bz2.lib;FLAC++.lib;FLAC.lib;freetype.lib;fmt.lib;fmt-c.lib;GlU32.Lib;iphlpapi.lib;libcurl.lib;libglew32.lib;libpng16.lib;ogg.lib;OpenAL32.lib;OpenGL32.Lib;secur32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;opengl32.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;ws2_32.lib;crypt32.lib;zs.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>clang-format.exe --dry-run --Werror src/main.cpp</Command>
@@ -138,7 +138,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;NOMINMAX;QL_USE_ALL;QL_EXPORT;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;NOMINMAX;QL_USE_SFML;QL_EXPORT;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -170,7 +170,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>brotlicommon.lib;brotlidec.lib;brotlienc.lib;bz2.lib;FLAC++.lib;FLAC.lib;freetype.lib;GlU32.Lib;libpng16.lib;ogg.lib;OpenAL32.lib;OpenGL32.Lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;zlib.lib;opengl32.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;ws2_32.lib;libcurl.lib;crypt32.lib;boost_filesystem-vc143-mt-x64-1_86.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>avrt.lib;bcrypt.lib;brotlicommon.lib;brotlidec.lib;brotlienc.lib;bz2.lib;FLAC++.lib;FLAC.lib;freetype.lib;fmt.lib;fmt-c.lib;GlU32.Lib;iphlpapi.lib;libcurl.lib;libglew32.lib;libpng16.lib;ogg.lib;OpenAL32.lib;OpenGL32.Lib;secur32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;opengl32.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;ws2_32.lib;crypt32.lib;zs.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -178,6 +178,9 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\ql\vk\objects.cpp" />
+    <ClCompile Include="src\core\ql\vk\vulkan.cpp" />
+    <ClCompile Include="src\core\ql\vk\window.cpp" />
     <ClCompile Include="src\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -482,6 +485,10 @@
     <ClInclude Include="src/_template/core/x.hpp" />
     <ClInclude Include="src/core/ql/core/advanced-type/iterative/ema.hpp" />
     <ClInclude Include="src/_template/graphic/g.hpp" />
+    <ClInclude Include="src\core\ql\vk\objects.hpp" />
+    <ClInclude Include="src\core\ql\vk\vulkan.hpp" />
+    <ClInclude Include="src\core\ql\vk\window.hpp" />
+    <ClInclude Include="src\entry-point.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
@@ -497,6 +504,7 @@
     <None Include="script-pull.sh" />
     <None Include="script-run.bat" />
     <None Include="script-sync-submodules.sh" />
+    <None Include="src\core\.gitmodules" />
     <None Include="sync-submodules.bat" />
     <None Include="vcpkg.json" />
   </ItemGroup>
