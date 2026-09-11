@@ -178,9 +178,6 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\core\ql\vk\objects.cpp" />
-    <ClCompile Include="src\core\ql\vk\vulkan.cpp" />
-    <ClCompile Include="src\core\ql\vk\window.cpp" />
     <ClCompile Include="src\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
@@ -485,10 +482,8 @@
     <ClInclude Include="src/_template/core/x.hpp" />
     <ClInclude Include="src/core/ql/core/advanced-type/iterative/ema.hpp" />
     <ClInclude Include="src/_template/graphic/g.hpp" />
-    <ClInclude Include="src\core\ql\vk\objects.hpp" />
-    <ClInclude Include="src\core\ql\vk\vulkan.hpp" />
-    <ClInclude Include="src\core\ql\vk\window.hpp" />
     <ClInclude Include="src\entry-point.hpp" />
+    <ClInclude Include="src\state\main-state.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
